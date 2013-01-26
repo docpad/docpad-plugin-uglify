@@ -2,26 +2,28 @@
 	"name": "docpad-plugin-uglify",
 	"version": "1.0.0",
 	"description": "Adds support for uglify-js's parser/compressor to DocPad",
-	"homepage": "https://github.com/bevry/docpad-extras",
+	"homepage": "http://docpad.org/plugin/uglify",
 	"keywords": [
 		"docpad",
 		"docpad-plugin",
 		"uglify",
 		"uglify-js"
 	],
-	"author": "Takeharu.Oshida(http://georgeosddev.github.com)",
+	"author": "Takeharu Oshida (http://georgeosddev.github.com)",
 	"maintainers": [
-		"Takeharu.Oshida(http://georgeosddev.github.com)"
+		"Takeharu Oshida (https://github.com/georgeOsdDev)",
+		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
 	],
 	"contributors": [
-		"Takeharu.Oshida(http://georgeosddev.github.com)"
+		"Takeharu Oshida (https://github.com/georgeOsdDev)",
+		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
 	],
 	"bugs": {
-		"url": "https://github.com/bevry/docpad-extras/issues"
+		"url": "http://docpad.org/plugin/uglify/issues"
 	},
 	"repository" : {
 		"type": "git",
-		"url": "http://github.com/bevry/docpad-extras.git"
+		"url": "https://github.com/docpad/docpad-plugin-uglify.git"
 	},
 	"engines" : {
 		"node": ">=0.4.0",
@@ -31,7 +33,7 @@
 		"uglify-js": "1.3.3"
 	},
 	"devDependencies": {
-		"coffee-script": "1.3.x"
+		"coffee-script": "~1.4.x"
 	},
 	"main": "./out/uglify.plugin.js",
 	"scripts": {
