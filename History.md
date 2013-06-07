@@ -1,5 +1,8 @@
 ## History
 
+- v2.2.0 June 7, 2013
+	- Added explicit minify support
+
 - v2.1.0 June 7, 2013
 	- Dependency upgrades
 

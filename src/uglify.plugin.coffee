@@ -5,15 +5,19 @@ module.exports = (BasePlugin) ->
 		# Plugin Name
 		name: 'uglify'
 
+		# Plugin Configuration
+		config:
+			all: true
+
 		# Render the document
 		renderDocument: (opts) ->
 			# Prepare
-			{extension} = opts
+			{file,extension} = opts
 
 			# JavaScript
 			if extension is 'js'
-				# Render and complete
-				opts.content = require('uglify-js').minify(opts.content, {fromString:true}).code
+				if (@getConfig().all is true and file.get('minify') isnt false) or (file.get('minify') is true)
+					opts.content = require('uglify-js').minify(opts.content, {fromString:true}).code
 
 			# Chain
 			@

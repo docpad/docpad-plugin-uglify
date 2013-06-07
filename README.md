@@ -15,6 +15,10 @@ npm install --save docpad-plugin-uglify
 ```
 
 
+## Configuration
+By default we will minify all javascript files that don't have `minify: false` in their meta data. You can turn this off by setting `plugins: uglify: all: false` in your docpad configuration file then explicitly setting `minify: true` in your meta data.
+
+
 ## History
 [You can discover the history inside the `History.md` file](https://github.com/bevry/docpad-plugin-uglify/blob/master/History.md#files)
 

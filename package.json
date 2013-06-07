@@ -1,6 +1,6 @@
 {
 	"name": "docpad-plugin-uglify",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"description": "Adds support for uglify-js's parser/compressor to DocPad",
 	"homepage": "http://docpad.org/plugin/uglify",
 	"keywords": [
