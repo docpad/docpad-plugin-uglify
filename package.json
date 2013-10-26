@@ -1,43 +1,45 @@
 {
-	"name": "docpad-plugin-uglify",
-	"version": "2.2.0",
-	"description": "Adds support for uglify-js's parser/compressor to DocPad",
-	"homepage": "http://docpad.org/plugin/uglify",
-	"keywords": [
-		"docpad",
-		"docpad-plugin",
-		"uglify",
-		"uglify-js"
-	],
-	"author": "Takeharu Oshida (http://georgeosddev.github.com)",
-	"maintainers": [
-		"Takeharu Oshida (https://github.com/georgeOsdDev)",
-		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
-	],
-	"contributors": [
-		"Takeharu Oshida (https://github.com/georgeOsdDev)",
-		"Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
-	],
-	"bugs": {
-		"url": "http://docpad.org/plugin/uglify/issues"
-	},
-	"repository" : {
-		"type": "git",
-		"url": "https://github.com/docpad/docpad-plugin-uglify.git"
-	},
-	"engines" : {
-		"node": ">=0.4",
-		"docpad": "6.x"
-	},
-	"dependencies": {
-		"uglify-js": "~2.3.6"
-	},
-	"devDependencies": {
-		"coffee-script": "~1.6.2",
-		"docpad": ">=6.37 <7"
-	},
-	"main": "./out/uglify.plugin.js",
-	"scripts": {
-		"test": "node ./out/uglify.test.js"
-	}
+  "name": "docpad-plugin-uglify",
+  "version": "2.2.0",
+  "description": "Adds support for uglify-js's parser/compressor to DocPad",
+  "homepage": "http://docpad.org/plugin/uglify",
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "uglify",
+    "uglify-js"
+  ],
+  "author": "Takeharu Oshida (http://georgeosddev.github.com)",
+  "maintainers": [
+    "Takeharu Oshida (https://github.com/georgeOsdDev)",
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+  ],
+  "contributors": [
+    "Takeharu Oshida (https://github.com/georgeOsdDev)",
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+  ],
+  "bugs": {
+    "url": "http://docpad.org/plugin/uglify/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/docpad/docpad-plugin-uglify.git"
+  },
+  "engines": {
+    "node": ">=0.4",
+    "docpad": "6.x"
+  },
+  "dependencies": {
+    "uglify-js": "~2.3.6"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.2"
+  },
+  "main": "./out/uglify.plugin.js",
+  "scripts": {
+    "test": "node ./out/uglify.test.js"
+  },
+  "peerDependencies": {
+    "docpad": "6"
+  }
 }
