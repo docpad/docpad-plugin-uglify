@@ -3,23 +3,27 @@
   "version": "2.3.0",
   "description": "Adds support for uglify-js's parser/compressor to DocPad",
   "homepage": "http://docpad.org/plugin/uglify",
-  "license": "MIT",
-  "homepage": "http://github.com/robloach/docpad-plugin-uglify",
   "keywords": [
     "docpad",
     "docpad-plugin",
-    "uglify"
+    "uglify",
+    "uglify-js"
   ],
-  "author": "Rob Loach (http://robloach.net)",
+  "author": "Takeharu Oshida (http://georgeosddev.github.com)",
   "maintainers": [
-    "Rob Loach (http://robloach.net)"
+    "Takeharu Oshida (https://github.com/georgeOsdDev)",
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+  ],
+  "contributors": [
+    "Takeharu Oshida (https://github.com/georgeOsdDev)",
+    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
   ],
   "bugs": {
-    "url": "http://github.com/robloach/docpad-plugin-uglify/issues"
+    "url": "http://docpad.org/plugin/uglify/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/RobLoach/docpad-plugin-uglify.git"
+    "url": "https://github.com/docpad/docpad-plugin-uglify.git"
   },
   "engines": {
     "node": ">=0.10",
