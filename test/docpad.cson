@@ -1,0 +1,10 @@
+templateData:
+  site:
+    title: 'UglifyJS Plugin for DocPad'
+
+# Since we are on the testing environment, enable the plugin.
+plugins:
+  uglify:
+    environments:
+      development:
+        enabled: true

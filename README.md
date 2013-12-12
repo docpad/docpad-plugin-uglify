@@ -5,22 +5,63 @@
 [![Flattr donate button](https://raw.github.com/balupton/flattr-buttons/master/badge-89x18.gif)](http://flattr.com/thing/344188/balupton-on-Flattr "Donate monthly to this project using Flattr")
 [![PayPayl donate button](https://www.paypalobjects.com/en_AU/i/btn/btn_donate_SM.gif)](https://www.paypal.com/au/cgi-bin/webscr?cmd=_flow&SESSION=IHj3DG3oy_N9A9ZDIUnPksOi59v0i-EWDTunfmDrmU38Tuohg_xQTx0xcjq&dispatch=5885d80a13c0db1f8e263663d3faee8d14f86393d55a810282b64afed84968ec "Donate once-off to this project using Paypal")
 
-Automatically minifies your JavaScript output with UglifyJS
+Minify all JavaScript in the `src/documents` folder, using
+[UglifyJS](http://github.com/mishoo/UglifyJS), in [DocPad](https://docpad.org).
+
+Convention:  `.js.anything`
 
 
 ## Install
 
-```
-npm install --save docpad-plugin-uglify
+```bash
+$ docpad install uglify
 ```
 
 
-## Configuration
-By default we will minify all javascript files that don't have `minify: false` in their meta data. You can turn this off by setting `plugins: uglify: all: false` in your docpad configuration file then explicitly setting `minify: true` in your meta data.
+## Configure
+
+### Defaults
+
+The default configuration for this plugin is the equivalant of adding the
+following UglifyJS options to your [DocPad configuration file](http://docpad.org/docs/config):
+
+``` coffee
+plugins:
+  uglify:
+    # Disable UglifyJS on the development environment.
+    environments:
+      development:
+        enabled: false
+
+    # Pass false to skip compressing entirely. Pass an object to specify custom
+    # compressor options: http://lisperator.net/uglifyjs/compress .
+    compress: {}
+
+    # Pass false to skip mangling names.
+    mangle: {}
+```
+
+
+### Template Configuration
+
+It is possible to override the default configuration on a per-template basis:
+
+``` css
+---
+uglify:
+  mangle: false
+---
+
+var hi = "Hello!";
+```
 
 
 ## History
 [You can discover the history inside the `History.md` file](https://github.com/bevry/docpad-plugin-uglify/blob/master/History.md#files)
+
+
+## Contributing
+[You can discover the contributing instructions inside the `Contributing.md` file](https://github.com/robloach/docpad-plugin-cssmin/blob/master/CONTRIBUTING.md#files)
 
 
 ## License

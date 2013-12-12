@@ -1,0 +1,1 @@
+(function(){var l,o;l="Hello",o="World!",console.log(""+l+" "+o)}).call(this);

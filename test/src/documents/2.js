@@ -1,5 +1,6 @@
 ---
-minify: false
+uglify:
+  minify: false
 ---
 
 function greeting(name){
