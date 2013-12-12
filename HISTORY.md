@@ -1,5 +1,9 @@
 ## History
 
+- v2.3.0 December 12th, 2013
+  - Allow use of direct UglifyJS options
+  - Only act on JavaScript document files
+
 - v2.2.0 June 7, 2013
 	- Added explicit minify support
 
