@@ -1,7 +1,7 @@
 {
   "name": "docpad-plugin-uglify",
   "version": "2.3.0",
-  "description": "Adds support for uglify-js's parser/compressor to DocPad",
+  "description": "Minify JavaScript in DocPad using UglifyJS",
   "homepage": "http://docpad.org/plugin/uglify",
   "keywords": [
     "docpad",
@@ -11,10 +11,12 @@
   ],
   "author": "Takeharu Oshida (http://georgeosddev.github.com)",
   "maintainers": [
+    "Rob Loach (https://github.com/robloach)",
     "Takeharu Oshida (https://github.com/georgeOsdDev)",
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
   ],
   "contributors": [
+    "Rob Loach (https://github.com/robloach)",
     "Takeharu Oshida (https://github.com/georgeOsdDev)",
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
   ],
@@ -26,7 +28,7 @@
     "url": "https://github.com/docpad/docpad-plugin-uglify.git"
   },
   "engines": {
-    "node": ">=0.10",
+    "node": ">=0.4",
     "docpad": "6.x"
   },
   "dependencies": {
