@@ -1,8 +1,8 @@
 {
-  "name": "docpad-plugin-uglify-testsite",
-  "version": "0.0.1",
-  "private": true,
-  "dependencies": {
-    "docpad-plugin-coffeescript": "~2.2.3"
-  }
+	"name": "docpad-plugin-uglify-testsite",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"docpad-plugin-coffeescript": "~2.2.3"
+	}
 }

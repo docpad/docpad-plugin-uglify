@@ -11,9 +11,6 @@ module.exports = (BasePlugin) ->
 			environments:
 				development:
 					enabled: false
-			
-			# Allow turning off minifcation entirely.
-			minify: true
 
 		# Constructor
 		constructor: ->
@@ -29,31 +26,27 @@ module.exports = (BasePlugin) ->
 		# Render the document
 		renderDocument: (opts,next) ->
 			# Prepare.
-			{extension, templateData, file, content} = opts
-			
+			config = @getConfig()
+			{extension, file, content} = opts
+			uglifyOpts = file.get('uglify')
+
 			# Ensure we are acting on a JavaScript document.
-			if extension == 'js' and file.type == 'document'
+			if extension == 'js' and file.type == 'document' and uglifyOpts
 				# Construct the options.
-				config = @getConfig()
-				uglifyOptions = {
-					fromString: true
-					# TODO: Make use of "output" variable to display status.
-				}
+				uglifyOpts = {}  if typeof uglifyOpts == 'boolean'
+				uglifyOpts.fromString = true
+				# @todo Use uglifyOpts.output to display warnings and logs.
 
-				# Allow use of global config options.
-				for own key, value of config
-					uglifyOptions[key] = value
+				# Inject the default configuration options.
+				for own key, value of config when key isnt 'environments'
+					uglifyOpts[key] ?= value
 
-				# Allow overriding using the document options.
-				if templateData.document.uglify or false
-					for own key, value of templateData.document.uglify
-						uglifyOptions[key] = value
-
-				# Check whether or not we should act on the document at all.
-				if uglifyOptions['minify'] or false
-					# Render the page with UglifyJS.
-					result = @UglifyJS.minify(content, uglifyOptions)
+				# Minify the content with UglifyJS.
+				try
+					result = @UglifyJS.minify(content, uglifyOpts)
 					opts.content = result.code
+				catch err
+					return next(err)
 
 			# Done, return back to DocPad
 			return next()

@@ -9,18 +9,26 @@
 
 <!-- /BADGES -->
 
-Minify all JavaScript in the `src/documents` folder, using
-[UglifyJS](http://github.com/mishoo/UglifyJS), in [DocPad](https://docpad.org).
-
-Convention:  `.js.anything`
+Minify JavaScript files with the `uglify: true` meta data, using [UglifyJS](https://github.com/mishoo/UglifyJS2).
 
 
 ## Install
 
 ```bash
-$ docpad install uglify
+docpad install uglify
 ```
 
+
+## Usage
+
+Create a JavaScript file with the *uglify* option:
+``` javascript
+---
+uglify: true
+---
+
+var hello = "Hello World!";
+```
 
 ## Configure
 
@@ -31,18 +39,18 @@ following UglifyJS options to your [DocPad configuration file](http://docpad.org
 
 ``` coffee
 plugins:
-  uglify:
-    # Disable UglifyJS on the development environment.
-    environments:
-      development:
-        enabled: false
+	uglify:
+		# Disable UglifyJS on the development environment.
+		environments:
+			development:
+				enabled: false
 
-    # Pass false to skip compressing entirely. Pass an object to specify custom
-    # compressor options: http://lisperator.net/uglifyjs/compress .
-    compress: {}
+		# Pass false to skip compressing entirely. Pass an object to specify custom
+		# compressor options: http://lisperator.net/uglifyjs/compress .
+		compress: {}
 
-    # Pass false to skip mangling names.
-    mangle: {}
+		# Pass false to skip mangling names.
+		mangle: {}
 ```
 
 
@@ -50,13 +58,14 @@ plugins:
 
 It is possible to override the default configuration on a per-template basis:
 
-``` css
+``` javascript
 ---
 uglify:
-  mangle: false
+	mangle: false
 ---
 
-var hi = "Hello!";
+// The "hello" variable name will stay the same.
+var hello = "Hello World!";
 ```
 
 <!-- HISTORY/ -->

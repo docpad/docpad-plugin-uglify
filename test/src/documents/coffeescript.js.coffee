@@ -1,3 +1,6 @@
+---
+uglify: true
+---
 # Initialize the variables.
 hello = "Hello"
 world = "World!"
