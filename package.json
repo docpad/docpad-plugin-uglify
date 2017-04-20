@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-uglify",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "Minify JavaScript in DocPad using UglifyJS",
   "homepage": "https://github.com/docpad/docpad-plugin-uglify",
   "license": "MIT",
