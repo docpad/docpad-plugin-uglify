@@ -1,1 +1,1 @@
-(function(){var l,o;l="Hello",o="World!",console.log(""+l+" "+o)}).call(this);
+(function(){console.log("Hello World!")}).call(this);
