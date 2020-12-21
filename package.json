@@ -95,7 +95,7 @@
   "main": "edition-esnext/index.js",
   "dependencies": {
     "docpad-baseplugin": "^1.4.0",
-    "uglify-js": "~3.10.1"
+    "uglify-js": "~3.12.2"
   },
   "devDependencies": {
     "@bevry/update-contributors": "^1.15.0",
